@@ -23,8 +23,9 @@
                 class="transition-all duration-700 bg-yellow-200 overflow-hidden flex items-center justify-center"
                 :class="[open ? 'max-w-lg' : 'max-w-0']"
             >
-                <div class="w-48 text-center font-bold text-xl">Sidebar</div>
-                <slot></slot>
+                <slot>
+                    <div class="w-48 text-center font-bold text-xl">Sidebar</div>
+                </slot>
             </div>
         </div>
 
