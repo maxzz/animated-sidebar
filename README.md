@@ -1,6 +1,8 @@
 ## About 
 
-# Credits
+Animated sidebar with Vue.js 3, TailwindCSS/Jit, and Vite.
+
+## Credits
 
 * [Power of Simplicity](https://medium.com/cstech/power-of-simplicity-sidebar-component-with-vue-and-tailwindcss-eb54fdd2710e)
 * [CodePen: sidebar-vue-tailwind](https://codepen.io/akgunberk/pen/MWbBByv)
