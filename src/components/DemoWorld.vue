@@ -44,8 +44,9 @@
     >Page Content</div>
 </template>
 
-<script lang="ts">
-    export default {
+<script lang="ts">import { defineComponent } from "@vue/runtime-core";
+
+    export default defineComponent({
         data() {
             return {
                 open: false,
@@ -58,7 +59,7 @@
                 this.open = !this.open;
             },
         },
-    };
+    });
 </script>
 
 <style>
