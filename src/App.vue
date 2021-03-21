@@ -1,6 +1,6 @@
 <template>
     <DemoWorld>
-        <ul class="w-48 text-center font-bold text-xl">
+        <ul class="w-64 text-center font-bold text-xl">
             <li>01</li>
             <li>02</li>
             <li>03</li>

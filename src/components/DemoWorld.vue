@@ -3,25 +3,23 @@
     <div class="fixed inset-0 flex z-40">
         <!-- Sidebar -->
         <div
-            class="absolute flex top-0 h-screen z-20"
-            :class="[right ? 'right-0 flex-row' : 'left-0 flex-row-reverse']"
+            class="absolute flex top-0 h-screen z-20" :class="[right ? 'right-0 flex-row' : 'left-0 flex-row-reverse']"
         >
             <!--Drawer -->
             <button
-                @click.prevent="toggle()"
                 class="w-12 h-48 p-1 my-auto rounded text-white bg-gray-600 text-center focus:outline-none hover:bg-gray-500 transition-color duration-300"
+                @click.prevent="toggle()"
             >
                 <span
-                    :class="[right ? '-rotate-90' : 'rotate-90']"
-                    class="block transform origin-center font-bold"
+                    class="block transform origin-center font-bold" :class="[right ? '-rotate-90' : 'rotate-90']"
                 >Drawer</span>
             </button>
 
             <!-- Sidebar Content -->
             <div
-                ref="content"
-                class="transition-all duration-700 bg-yellow-200 overflow-hidden flex items-center justify-center"
                 :class="[open ? 'max-w-lg' : 'max-w-0']"
+                class="transition-all duration-700 bg-yellow-200 overflow-hidden flex items-center justify-center"
+                ref="content"
             >
                 <slot>
                     <div class="w-48 text-center font-bold text-xl">Sidebar</div>
@@ -29,12 +27,12 @@
             </div>
         </div>
 
+        <!-- Dimmer -->
         <transition name="fade">
-            <!-- Dimmer -->
             <div
                 v-if="dimmer && open"
-                @click="toggle()"
                 class="flex-1 bg-gray-400 bg-opacity-75 active:outline-none z-10"
+                @click="toggle()"
             />
         </transition>
     </div>
